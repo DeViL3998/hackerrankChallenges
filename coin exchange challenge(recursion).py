@@ -1,6 +1,8 @@
 def nWays(money,coinCurr,coins):
+
     if money==0:
         return 1
+
     if money<0:
         return 0
 
@@ -10,7 +12,6 @@ def nWays(money,coinCurr,coins):
         ways += nWays(money-coins[coin], coin, coins)
 
     return ways
-
 
 mn = list(map(int,input().split()))
 money = mn[0]
